@@ -1,0 +1,136 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+     <title>Health - Medical Website</title>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="Tooplate">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+     <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+     <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+     <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+     <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+     <link rel="stylesheet" href="{% static 'css/tooplate-style.css' %}">
+
+</head>
+
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+     <section class="preloader">
+          <div class="spinner">
+
+               <span class="spinner-rotate"></span>
+
+          </div>
+     </section>
+     <header>
+          <div class="container">
+               <div class="row">
+
+                    <div class="navbar-header">
+                         <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                              <span class="icon icon-bar"></span>
+                              <span class="icon icon-bar"></span>
+                              <span class="icon icon-bar"></span>
+                         </button>
+                         <a href="index.html" class="navbar-brand"><i class="fa fa-h-square"></i>HealthCare</a>
+                    </div>
+     
+                    <div class="col-md-8 col-sm-7 text-align-right">
+                         <span class="phone-icon"><i class="fa fa-phone"></i> +880 1686 82 32 62</span>
+
+                         <span class="email-icon"><i class="fa fa-envelope-o"></i> <a
+                                   href="#">info@healthcare.com</a></span>
+                    </div>
+
+               </div>
+          </div>
+     </header>
+     <section class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="container">
+
+               
+          <br>
+               <div class="row">
+                    <div class="col">
+                         <div class="card card-body">
+                              <form method="get">
+                                   {{myFilter.form}}
+                              <button class="btn btn-primary" type="submit">Search</button>
+                              </form>
+                         </div>
+                    </div>
+
+               </div>
+          <br>
+          
+          <br>
+               <div class="row">
+                    <div class="col-md">
+                         <div class="card card-body">
+
+                         </div>
+                         <div class="card card-body">
+                              <table class="table">
+                                   <tr>
+                                        <th>Doctor Name</th>
+                                        <th>Department</th>
+                                        <th>Chember</th>
+                                        <th>Phone Number</th>
+                                   </tr>
+
+                                   {% for i in doctors %}
+                                   <tr>
+                                        <td>{{i.name}}</td>
+                                        <td>{{i.category}}</td>
+                                        <td>{{i.address}}</td>
+                                        <td>{{i.phone}}</td>
+                                   </tr>
+                                   {% endfor %}
+
+                              </table>
+                         </div>
+                    </div>
+
+               </div>
+          <br>
+               <!-- FOOTER -->
+               <footer data-stellar-background-ratio="5">
+                    <div class="container">
+                         <div class="row">
+                              <div class="col-md-12 col-sm-12 border-top">
+                                   <div class="col-md-4 col-sm-6">
+                                        <div class="copyright-text">
+                                             <p>Copyright &copy; 2020 Md Minhazur Rahman Rafi</p>
+                                        </div>
+                                   </div>
+                                   <div class="col-md-2 col-sm-2 text-align-center">
+                                        <div class="angle-up-btn">
+                                             <a href="#top" class="smoothScroll wow fadeInUp" data-wow-delay="1.2s"><i
+                                                       class="fa fa-angle-up"></i></a>
+                                        </div>
+                                   </div>
+                              </div>
+
+                         </div>
+                    </div>
+               </footer>
+
+               <script src="{% static 'js/jquery.js' %}"></script>
+               <script src="{% static 'js/bootstrap.min.js' %}"></script>
+               <script src="{% static 'js/jquery.sticky.js' %}"></script>
+               <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+               <script src="{% static 'js/wow.min.js' %}"></script>
+               <script src="{% static 'js/smoothscroll.js' %}"></script>
+               <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+               <script src="{% static 'js/custom.js' %}"></script>
+
+</body>
+
+</html>
